@@ -12,5 +12,17 @@ function RegisterForm() {
         document.forms.RegForm.cpass.value;
   
     console.log(Fname, Lname, Email, Pass); 
-    return true
+    if (pass.length < 6) { 
+        alert 
+            ("Password should be atleast 6 character long"); 
+        password.focus(); 
+        return false; 
+    } 
+    if (!(pass == cpass)) {
+        alert
+          ("Passwords should be the same");
+        return false;
+    }
+ 
+    return true;
 }
