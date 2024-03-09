@@ -8,6 +8,13 @@
         <h1>Registration Page</h1>
         <p>Welcome to the registration page!</p>
         <div style = "text-align: center;"></div>
+        <form action="/action_page.php" method="get" id="nameform">
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname"><br><br>
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname">
+        </form>
+        <button type="submit" form="nameform" value="Submit">Submit</button>
         </a>
         <a href="login.html">
             <button type = "button">Login Here</button>
