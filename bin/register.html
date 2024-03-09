@@ -8,7 +8,7 @@
         <h1>Registration Page</h1>
         <p>Welcome to the registration page!</p>
         <div style = "text-align: center;"></div>
-        <form action="/register.java" method="get" id="nameform">
+        <form name="RegForm" onsubmit="return RegisterForm()">
             <label for="fname">First name:</label>
             <input type="text" id="fname" name="fname"><br><br>
             <label for="lname">Last name:</label>
@@ -25,5 +25,6 @@
         <a href="login.html">
             <button type = "button">Login Here</button>
         </a>
+        <script src="register.js"></script>
     </body> 
 </html>
