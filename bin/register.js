@@ -1,5 +1,5 @@
  
-function GEEKFORGEEKS() { 
+function RegisterForm() { 
     const Fname = 
         document.forms.RegForm.fname.value;
     const Lname =
