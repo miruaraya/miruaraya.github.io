@@ -12,3 +12,5 @@ function GEEKFORGEEKS() {
         document.forms.RegForm.cpass.value;
   
     console.log(Fname, Lname, Email, Pass); 
+    return true
+}
