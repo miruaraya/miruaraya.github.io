@@ -37,7 +37,7 @@ function validateInputs(){
     }
     else{
         setSuccess(fname)
-	@@ -53,26 +42,26 @@ function validateInputs(){
+    }
 
     if(passwordVal === ''){
         success= false;
@@ -64,3 +64,4 @@ function validateInputs(){
     }
 
     return success;
+}
