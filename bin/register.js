@@ -4,12 +4,7 @@ const username = document.querySelector('#lname');
 const email = document.querySelector('#email');
 const pass = document.querySelector('#pass');
 const cpass = document.querySelector('#cpass');
-const data = {
-    firstName: fname,
-    lastName: lname,
-    email: email,
-    password: pass
-}
+
 
 form.addEventListener('submit', (e)=>{
     if(!validateInputs()){
@@ -17,11 +12,7 @@ form.addEventListener('submit', (e)=>{
     }
     else{
         const fs = require('fs');
-        let csvContent = "data:text/csv;charset=utf-8,";
-        data.forEach(function(rowArray){
-            let row = rowArray.join(",");
-            csvContent += row + "\r\n";
-        }
+        let csvContent = fname + "," + lname + "," + email + "," + password + "," + "\r\n";
         fs.writeFile("data.csv", csvContent, (err) => {
             if (err) throw err;
         })   
