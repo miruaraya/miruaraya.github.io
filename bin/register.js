@@ -1,9 +1,9 @@
-const form = document.querySelector('#form')
-const username = document.querySelector('#fname');
-const username = document.querySelector('#lname');
-const email = document.querySelector('#email');
-const pass = document.querySelector('#pass');
-const cpass = document.querySelector('#cpass');
+const form = document.getElementByID('form')
+const username = document.getElementByID('fname');
+const username = document.getElementByID('lname');
+const email = document.getElementByID('email');
+const pass = document.getElementByID('pass');
+const cpass = document.getElementByID('cpass');
 
 
 form.addEventListener('submit', (e)=>{
