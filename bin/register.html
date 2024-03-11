@@ -3,29 +3,46 @@
     <head> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
-        <script src="register.js"></script>
+        <script src="register.js" defer></script>
         <title>Blouin Voice Studio</title> 
     </head> 
     <body> 
+        <div class="container">
+        <form action="" id="form">
         <h1>Registration Page</h1>
         <p>Welcome to the registration page!</p>
         <div style = "text-align: center;"></div>
-        <form name="RegForm" onsubmit="return RegisterForm()">
+            <div class="input-group">
             <label for="fname">First name:</label>
             <input type="text" id="fname" name="fname"><br><br>
+            <div class="error"></div>
+            </div>
+            <div class="input-group">
             <label for="lname">Last name:</label>
             <input type="text" id="lname" name="lname"><br><br>
+            <div class="error"></div>
+            </div>
+            <div class="input-group">
             <label for="email">Email address:</label>
             <input type="text" id="email" name="email"><br><br>
+            <div class="error"></div>
+            </div>
+            <div class="input-group">
             <label for="pass">Password:</label>
             <input type="text" id="pass" name="pass"><br><br>
+            <div class="error"></div>
+            </div>
+            <div class="input-group">
             <label for="cpass">Confirm password:</label>
             <input type="text" id="cpass" name="cpass">
+            <div class="error"></div>
+            </div>
+        <button type="submit">Submit</button>
         </form>
-        <button type="submit" form="nameform" value="Submit">Submit</button>
         </a>
         <a href="login.html">
             <button type = "button">Login Here</button>
         </a>
+        
     </body> 
 </html>
