@@ -1,24 +1,25 @@
-
-form.addEventListener('submit', (e)=>{
-    const form = document.getElementByID('form');
-    const fname = document.getElementByID('fname');
-    const lname = document.getElementByID('lname');
-    const email = document.getElementByID('email');
-    const pass = document.getElementByID('pass');
-    const cpass = document.getElementByID('cpass');
+function createAccount(){
+    form.addEventListener('submit', (e)=>{
+        const form = document.getElementByID('form');
+        const fname = document.getElementByID('fname');
+        const lname = document.getElementByID('lname');
+        const email = document.getElementByID('email');
+        const pass = document.getElementByID('pass');
+        const cpass = document.getElementByID('cpass');
     
-    if(!validateInputs()){
-        alert("Registration Unsuccessful");
-    }
-    else{
-        alert("Registration Successful");
-        const fs = require('fs');
-        let csvContent = fname + "," + lname + "," + email + "," + password + "," + "\r\n";
-        fs.writeFile("data.csv", csvContent, (err) => {
-            if (err) throw err;
-        })   
-    }
-})
+        if(!validateInputs()){
+            alert("Registration Unsuccessful");
+        }
+        else{
+            alert("Registration Successful");
+            const fs = require('fs');
+            let csvContent = fname + "," + lname + "," + email + "," + password + "," + "\r\n";
+            fs.writeFile("data.csv", csvContent, (err) => {
+                if (err) throw err;
+            })   
+        }
+    })
+}
                       
 function validateInputs(){
     const fnameVal = fname.value.trim()
