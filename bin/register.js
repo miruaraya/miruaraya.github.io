@@ -1,12 +1,12 @@
-const form = document.getElementByID('form')
-const username = document.getElementByID('fname');
-const username = document.getElementByID('lname');
-const email = document.getElementByID('email');
-const pass = document.getElementByID('pass');
-const cpass = document.getElementByID('cpass');
-
 
 form.addEventListener('submit', (e)=>{
+    const form = document.getElementByID('form')
+    const fname = document.getElementByID('fname');
+    const lname = document.getElementByID('lname');
+    const email = document.getElementByID('email');
+    const pass = document.getElementByID('pass');
+    const cpass = document.getElementByID('cpass');
+    
     if(!validateInputs()){
         alert("Registration Unsuccessful");
     }
