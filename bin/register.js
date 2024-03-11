@@ -33,7 +33,7 @@ function validateInputs(){
 
     if(fnameVal===''){
         success=false;
-        setError(username,'Name is required')
+        setError(fname,'Name is required')
     }
     else{
         setSuccess(fname)
