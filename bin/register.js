@@ -22,7 +22,7 @@ form.addEventListener('submit', (e)=>{
             let row = rowArray.join(",");
             csvContent += row + "\r\n";
         }
-        fs.append("data.csv", csvContent, (err) => {
+        fs.writeFile("data.csv", csvContent, (err) => {
             if (err) throw err;
         })   
     }
