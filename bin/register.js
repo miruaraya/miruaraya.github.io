@@ -9,6 +9,7 @@ function createAccount(){
     
         if(!validateInputs()){
             alert("Registration Unsuccessful");
+            return false;
         }
         else{
             alert("Registration Successful");
@@ -16,7 +17,8 @@ function createAccount(){
             let csvContent = fname + "," + lname + "," + email + "," + password + "," + "\r\n";
             fs.writeFile("data.csv", csvContent, (err) => {
                 if (err) throw err;
-            })   
+            })
+            return true;
         }
     })
 }
