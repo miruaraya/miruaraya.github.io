@@ -1,49 +1,44 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-    <head> 
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <script src="register.js" defer></script>
-        <title>Blouin Voice Studio</title> 
-    </head> 
-    <body> 
-        <div class="container">
-        <form action="" id="form">
-        <h1>Registration Page</h1>
-        <p>Welcome to the registration page!</p>
-        <div style = "text-align: center;"></div>
-            <div class="input-group">
-            <label for="fname">First name:</label>
-            <input type="text" id="fname" name="fname"><br><br>
-            <div class="error"></div>
-            </div>
-            <div class="input-group">
-            <label for="lname">Last name:</label>
-            <input type="text" id="lname" name="lname"><br><br>
-            <div class="error"></div>
-            </div>
-            <div class="input-group">
-            <label for="email">Email address:</label>
-            <input type="text" id="email" name="email"><br><br>
-            <div class="error"></div>
-            </div>
-            <div class="input-group">
-            <label for="pass">Password:</label>
-            <input type="password" id="pass" name="pass"><br><br>
-            <div class="error"></div>
-            </div>
-            <div class="input-group">
-            <label for="cpass">Confirm password:</label>
-            <input type="password" id="cpass" name="cpass">
-            <div class="error"></div>
-            </div>
-        <button type="submit" onclick= "return createAccount();">Submit</button>
-        </form>
-        </a>
-        <a href="login.html">
-            <button type = "button">Login Here</button>
-        </a>
-    </body> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="style.css">
+ <script src="register.js" defer></script>
+ <title>Register</title>
+</head>
+<body>
+ <div class="container">
+ <form action="" id="form">
+ <h1>Register</h1>
+ <div class="input-group">
+ <label for="fname">First Name:</label>
+ <input type="text" id="fname" name="fname">
+ <div class="error"></div>
+ </div>
+<div class="input-group">
+ <label for="lname">Last Name:</label>
+ <input type="text" id="lname" name="lname">
+ <div class="error"></div>
+ </div>
+ <div class="input-group">
+ <label for="email">Email</label>
+ <input type="text" id="email" name="email" >
+ <div class="error"></div>
+ </div>
+ <div class="input-group">
+ <label for="password">Password</label>
+ <input type="password" id="password" name="password">
+ <div class="error"></div>
+ </div>
+ <div class="input-group">
+ <label for="cpassword">Confirm Password</label>
+ <input type="password" id="cpassword" name="cpassword">
+ <div class="error"></div>
+ </div>
+ <button type="submit">Register</button>
+ </form>
+ </div>
+</body>
 </html>
