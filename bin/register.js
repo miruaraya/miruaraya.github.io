@@ -8,9 +8,10 @@ const cpass = document.querySelector('#cpass');
 
 form.addEventListener('submit', (e)=>{
     if(!validateInputs()){
-        e.preventDefault();
+        alert("Registration Unsuccessful");
     }
     else{
+        alert("Registration Successful");
         const fs = require('fs');
         let csvContent = fname + "," + lname + "," + email + "," + password + "," + "\r\n";
         fs.writeFile("data.csv", csvContent, (err) => {
