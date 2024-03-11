@@ -2,8 +2,8 @@ const form = document.querySelector('#form')
 const username = document.querySelector('#fname');
 const username = document.querySelector('#lname');
 const email = document.querySelector('#email');
-const password = document.querySelector('#pass');
-const cpassword = document.querySelector('#cpass');
+const pass = document.querySelector('#pass');
+const cpass = document.querySelector('#cpass');
 
 form.addEventListener('submit', (e)=>{
     if(!validateInputs()){
