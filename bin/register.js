@@ -1,6 +1,6 @@
 
 form.addEventListener('submit', (e)=>{
-    const form = document.getElementByID('form')
+    const form = document.getElementByID('form').submit();
     const fname = document.getElementByID('fname');
     const lname = document.getElementByID('lname');
     const email = document.getElementByID('email');
