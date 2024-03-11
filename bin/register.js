@@ -1,39 +1,28 @@
-function createAccount(){
-    form.addEventListener('submit', (e)=>{
-        const form = document.getElementByID('form');
-        const fname = document.getElementByID('fname');
-        const lname = document.getElementByID('lname');
-        const email = document.getElementByID('email');
-        const pass = document.getElementByID('pass');
-        const cpass = document.getElementByID('cpass');
+const form = document.querySelector('#form')
+const fname = document.querySelector('#fname');
+const lname = document.querySelector('#lname');
+const email = document.querySelector('#email');
+const password = document.querySelector('#password');
+const cpassword = document.querySelector('#cpassword');
+
+form.addEventListener('submit',(e)=>{
     
-        if(!validateInputs()){
-            alert("Registration Unsuccessful");
-            return false;
-        }
-        else{
-            alert("Registration Successful");
-            const fs = require('fs');
-            let csvContent = fname + "," + lname + "," + email + "," + password + "," + "\r\n";
-            fs.writeFile("data.csv", csvContent, (err) => {
-                if (err) throw err;
-            })
-            return true;
-        }
-    })
-}
-                      
+    if(!validateInputs()){
+        e.preventDefault();
+    }
+})
+
 function validateInputs(){
     const fnameVal = fname.value.trim()
     const lnameVal = lname.value.trim()
     const emailVal = email.value.trim();
-    const passwordVal = pass.value.trim();
-    const cpasswordVal = cpass.value.trim();
+    const passwordVal = password.value.trim();
+    const cpasswordVal = cpassword.value.trim();
     let success = true
 
     if(fnameVal===''){
         success=false;
-        setError(username,'Name is required')
+        setError(fname,'First and last name is required')
     }
     else{
         setSuccess(fname)
@@ -53,26 +42,26 @@ function validateInputs(){
 
     if(passwordVal === ''){
         success= false;
-        setError(pass,'Password is required')
+        setError(password,'Password is required')
     }
     else if(passwordVal.length<8){
         success = false;
-        setError(pass,'Password must be atleast 8 characters long')
+        setError(password,'Password must be atleast 8 characters long')
     }
     else{
-        setSuccess(pass)
+        setSuccess(password)
     }
 
     if(cpasswordVal === ''){
         success = false;
-        setError(cpass,'Confirm password is required')
+        setError(cpassword,'Confirm password is required')
     }
     else if(cpasswordVal!==passwordVal){
         success = false;
-        setError(cpass,'Password does not match')
+        setError(cpassword,'Password does not match')
     }
     else{
-        setSuccess(cpass)
+        setSuccess(cpassword)
     }
 
     return success;
