@@ -3,3 +3,7 @@ p {
     font-size: 18px;
  }
 body { background-color: cornsilk; }
+
+#form{
+    width:400px;
+}
