@@ -4,10 +4,29 @@ const username = document.querySelector('#lname');
 const email = document.querySelector('#email');
 const pass = document.querySelector('#pass');
 const cpass = document.querySelector('#cpass');
+const fs = require('fs');
+const data = {
+    firstName: fname,
+    lastName: lname,
+    email: email,
+    password: pass
+}
 
 form.addEventListener('submit', (e)=>{
     if(!validateInputs()){
         e.preventDefault();
+    }
+    else{
+        let csvContent = "data:text/csv;charset=utf-8,";
+        data.forEach(function(rowArray){
+            let row = rowArray.join(",");
+            csvContent += row + "\r\n";
+            fs.appendFile("data.csv", csvContent, (err) => {
+                if (err) {
+                    console.log(err);
+                }
+            }
+        });
     }
 })
                       
